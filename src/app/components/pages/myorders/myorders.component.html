@@ -1,0 +1,23 @@
+<div class="myorders-container">
+    <h1>My Orders</h1>
+
+    <div *ngIf="orders.length === 0" class="no-orders">
+        <p>No orders found. Start shopping now!</p>
+    </div>
+
+    <div *ngFor="let order of orders" class="order-card">
+        <h2>Order #{{ order.orderId }}</h2>
+        <p><strong>Date:</strong> {{ order.orderDate | date:'medium' }}</p>
+        <p><strong>Status:</strong> {{ order.status }}</p>
+        <p><strong>Pickup Time:</strong> {{ order.pickupTime }}</p>
+        <p><strong>Total Price:</strong> {{ order.totalPrice.toFixed(2) | currency:'INR'}}</p>
+
+        <h3>Items:</h3>
+        <ul>
+            <li *ngFor="let item of order.items">
+                {{ item.food.name }} - Quantity: {{ item.quantity }} - Price: {{ item.price.toFixed(2) |
+                currency:'INR'}}
+            </li>
+        </ul>
+    </div>
+</div>

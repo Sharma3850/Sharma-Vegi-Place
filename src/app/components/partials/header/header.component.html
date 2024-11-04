@@ -1,0 +1,22 @@
+<nav class="navbar">
+  <div class="navbar-logo logo">Sharma Vegies Place ☺</div>
+  <div class="right">
+      <ul class="navbar-links ">
+          <li><a routerLink="/home">Home</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+          <li><a routerLink="/myorders">My Orders</a></li>
+          <li>
+            <a routerLink="/cart-page"> Cart <span>{{cartQuantity}}</span>
+            </a>
+          </li>
+      </ul>
+      <div *ngIf="userName" class="user-icon" >
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/user.png" alt="User Icon" />
+          <div class="dropdown-menu menu">
+              <a href="#">Cart</a>
+              <a (click)="logout()">Logout</a>
+          </div>
+      </div>
+  </div>
+</nav>

@@ -1,0 +1,127 @@
+/* Checkout Component Styles */
+.total {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  font-weight: bold;
+  text-align: right; /* Align total to the right */
+}
+
+.pickup-time {
+  margin: 1rem 0;
+}
+
+ul {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+
+.item-details {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.item-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.item-quantity {
+  color: #666; /* Grey color for quantity */
+}
+
+.item-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2b7a2b; /* Green color for price */
+}
+
+/* Button Styles */
+.confirm-button {
+  background-color: #5cb85c; /* Bootstrap success color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin-top: 1rem;
+  margin: 0 5px;
+}
+
+.confirm-button:hover {
+  background-color: #4cae4c; /* Darker shade on hover */
+}
+
+.home-button {
+  background-color: #d9534f; /* Softer red */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin: 0 5px;
+}
+
+.home-button:hover {
+  background-color: #c9302c; /* Darker red for hover */
+}
+
+.confirmation {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  color: #3c763d;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .cart-item {
+      flex-direction: column; /* Stack items on smaller screens */
+      align-items: flex-start;
+  }
+
+  .item-details {
+      margin-left: 0; /* Remove left margin */
+      margin-top: 5px;
+  }
+
+  .item-price {
+      margin-top: 5px;
+      align-self: flex-start;
+  }
+
+  .total, .pickup-time, .button-container, .confirmation {
+      text-align: center; 
+  }
+}

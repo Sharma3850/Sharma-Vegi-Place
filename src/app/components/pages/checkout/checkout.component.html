@@ -1,0 +1,40 @@
+<div style="width: 75%; margin: 0 auto;">
+    <app-title title="Checkout" margin="1.5rem 0 0 2.5rem"></app-title>
+
+    <div *ngIf="cart && cart.items.length">
+        <h3>Your Selected Items</h3>
+        <ul>
+            <li *ngFor="let item of cart.items" class="cart-item">
+                <img [src]="item.food.imageUrl" [alt]="item.food.name" />
+                <div class="item-details">
+                    <div class="item-name">{{ item.food.name }}</div>
+                    <div class="item-quantity">Quantity: {{ item.quantity }}</div>
+                </div>
+                <div class="item-price">{{ item.price | currency:'INR' }}</div>
+            </li>
+        </ul>
+
+        <div class="total">
+            <h4>Total Amount: {{ cart.totalPrice | currency:'INR' }}</h4>
+        </div>
+
+        <div class="pickup-time">
+            <label for="pickupTime">Select Pickup Time:</label>
+            <select id="pickupTime" [(ngModel)]="selectedPickupTime">
+                <option *ngFor="let time of pickupTimes" [value]="time">{{ time }}</option>
+            </select>
+        </div>
+
+        <div class="button-container" style="text-align: center;">
+            <button (click)="confirmOrder()" class="confirm-button">Confirm Order</button>
+            <button (click)="GoToHome()" class="home-button">Back to home</button>
+        </div>
+
+        <div *ngIf="orderConfirmed" class="confirmation">
+            <h4>Your order has been confirmed!</h4>
+            <p>Pickup Time: {{ selectedPickupTime }}</p>
+        </div>
+    </div>
+
+    <app-not-found *ngIf="!cart || !cart.items.length" notFoundMessage="Your cart is empty!" resetLinkText="Go to Home"></app-not-found>
+</div>

@@ -1,0 +1,35 @@
+<app-search></app-search>
+<app-tags></app-tags>
+
+<!-- Show ItemUnavailableComponent if no items match the search -->
+<app-item-unavailable *ngIf="itemNotFound"></app-item-unavailable>
+
+<!-- Show NotFoundComponent if there are no items, and the user is not searching -->
+<app-not-found *ngIf="!itemNotFound && (!vegetables || !vegetables.length)" resetLinkText="Reset Search">
+</app-not-found>
+
+<!-- Display vegetable list only if items are found -->
+<ul *ngIf="!itemNotFound" class="vegetable-list">
+  <li *ngFor="let vegetable of vegetables" class="vegetable-item">
+    <a routerLink="/vegetable/{{ vegetable.id }}">
+      <img [src]="vegetable.imageUrl" [alt]="vegetable.name" class="vegetable-image" />
+      <div class="content">
+        <div class="name">{{ vegetable.name }}</div>
+        <span class="favorite {{ vegetable.favorite ? '' : 'not' }}">❤</span>
+        <div class="stars">
+          <span *ngFor="let star of getStars(vegetable.stars)">
+            ⭐
+          </span>
+        </div>
+        <div class="product-item-footer">
+          <div class="origins">
+            <span *ngFor="let origin of vegetable.origins">{{ origin }}</span>
+          </div>
+        </div>
+        <div class="price">
+          <span>{{ vegetable.price | currency: 'INR' }}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>

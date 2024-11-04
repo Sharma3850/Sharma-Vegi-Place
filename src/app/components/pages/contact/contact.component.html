@@ -1,0 +1,47 @@
+<div class="contact-container">
+    <!-- Background Header Section -->
+    <div class="contact-header">
+        <h1>Contact Us</h1>
+        <p>We're here to help! Reach out for any inquiries, feedback, or assistance.</p>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form #contactForm="ngForm" (ngSubmit)="OnSubmit(contactForm)">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" ngModel required aria-label="Full Name" placeholder="your name">
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" ngModel required aria-label="Email Address" placeholder="something@gmail.com">
+            
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" ngModel required aria-label="Subject" placeholder="Subject of your message">
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" ngModel required aria-label="Message" placeholder="Your message here..."></textarea>
+            
+            <button [disabled]="!contactForm.valid" type="submit">Submit</button>
+        </form>
+    </div>
+    
+    <!-- Contact Information Section -->
+    <div class="contact-info">
+        <div class="info-card">
+            <h3>Our Location</h3>
+            <p>123 LPU, Punjab, Zip Code 144001</p>
+        </div>
+        <div class="info-card">
+            <h3>Customer Support</h3>
+            <p>Phone: +123456789</p>
+        </div>
+        <div class="info-card">
+            <h3>Follow Us</h3>
+            <p>
+                <a >Facebook</a> |
+                <a >Instagram</a> |
+                <a >Twitter</a>
+            </p>
+        </div>
+    </div>
+</div>

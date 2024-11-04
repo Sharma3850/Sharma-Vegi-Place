@@ -1,0 +1,102 @@
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Add margin reset */
+}
+
+li {
+  margin: 1rem; /* Add more spacing between items */
+}
+
+.vegetable-item {
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.vegetable-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+li a {
+  height: 25rem; /* Increased height for more content */
+  width: 22rem; /* Increased width */
+  border: 1px solid #ccc; /* Soft border */
+  border-radius: 1rem;
+  background: #f9f9f9; /* Light background */
+  overflow: hidden;
+  position: relative; /* For absolutely positioned elements */
+  text-decoration: none; /* Remove underline */
+  color: #333; /* Default text color */
+}
+
+li a:hover {
+  opacity: 0.95; /* Slightly darker on hover */
+}
+
+.vegetable-image {
+  object-fit: cover;
+  height: 15rem; /* Adjust image height */
+  border-top-left-radius: 1rem; /* Rounded corners */
+  border-top-right-radius: 1rem; /* Rounded corners */
+}
+
+.content {
+  margin-top: 0.3rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  height: 7rem;
+}
+
+.favorite {
+  position: absolute;
+  top: 1rem; /* Adjust position */
+  right: 1rem;
+  font-size: 1.5rem; /* Larger favorite icon */
+  color: gold; /* Highlighted color for favorites */
+}
+
+.favorite.not {
+  color: lightgray; /* Grey color for non-favorites */
+}
+
+.stars {
+  margin-bottom: 0.2rem;
+  font-size: 1rem; /* Size of star icons */
+}
+
+.product-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.origins {
+  flex: 9;
+}
+
+.origins span {
+  border-radius: 2rem;
+  background-color: #e0e0e0; /* Background for origins */
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #555; /* Darker text color */
+  margin-right: 0.3rem;
+  padding: 0.2rem 0.5rem; /* Padding for origins */
+  margin-top: 0.2rem;
+}
+
+.price {
+  position: absolute;
+  bottom: 0;
+  left: 0.9rem;
+  background: white;
+  padding: 0.5rem 1rem; /* Adjust padding for price */
+  color: #414141;
+  margin-top: 0.7rem;
+  font-size: 1.2rem; /* Slightly larger font size */
+  border-radius: 0.5rem; /* Rounded corners for price box */
+}

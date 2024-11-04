@@ -1,0 +1,125 @@
+/* Contact Page Styles */
+.contact-container {
+    width: 75%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header Section */
+.contact-header {
+    background: linear-gradient(135deg, #134413, #11418e);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.contact-header h1 {
+    font-size: 2.5rem;
+}
+
+.contact-header p {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+/* Contact Information Section */
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.info-card {
+    background-color: #ffffff; /* Changed to white for better contrast */
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #4caf50; /* Heading color matching the header */
+}
+
+.info-card p, .info-card a {
+    font-size: 1rem;
+    color: #333;
+}
+
+.info-card a {
+    color: #4caf50; /* Match link color to header */
+    text-decoration: none; /* Remove underline */
+}
+
+.info-card a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Contact Form Section */
+.contact-form {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #333; /* Heading color for consistency */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #555;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, #4caf50, #2e7d32); /* Consistent button gradient */
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #388e3c, #2e7d32); /* Darker gradient on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .info-card, .contact-form {
+        width: 100%;
+    }
+}

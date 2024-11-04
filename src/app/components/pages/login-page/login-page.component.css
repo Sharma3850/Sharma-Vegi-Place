@@ -1,0 +1,105 @@
+/* Container to center the card */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #6b11cba7 0%, #fc3e2566 100%), url("../../../../assets/loginbg.jpg");
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+:host {
+  font-family: sans-serif;
+}
+
+.login-card {
+  background-color: rgba(255, 255, 255, 0.11);
+  color: white !important;
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  transform: translateX(70%);
+  transition: border 0.3s ease, transform 0.3s ease; 
+}
+
+.login-card:hover {
+  border: 2px solid #6a11cb; 
+  transform: translateX(70%) scale(1.01); 
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+
+input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  color: aliceblue;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 0.7rem;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"], button[type="reset"] {
+  background-color: #6a11cb;
+  color: #fff;
+  border: none;
+}
+
+button[type="submit"]:hover, button[type="reset"]:hover {
+  background-color: #570d9f;
+}
+
+.google-btn {
+  background-color: aliceblue;
+  color: black;
+  border: none;
+}
+
+.google-btn:hover {
+  filter: invert(1);
+}
+
+.login-footer {
+  margin-top: 1.5rem;
+  font-size: 14px;
+}
+
+.login-footer a {
+  color: #6a11cb;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px white;
+  text-decoration: underline;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.login-footer a:hover {
+  color: #4e0f99;
+}

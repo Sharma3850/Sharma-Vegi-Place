@@ -1,0 +1,25 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Login</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="formData.username" name="email" required placeholder="Enter your email" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" [(ngModel)]="formData.password" name="password" required placeholder="Enter your password" />
+      </div>
+      
+      <button type="submit">Login</button>
+      <button *ngIf="formData.username || formData.password" style="margin-top: 5%;" type="reset">Reset</button>
+      <button type="button" class="google-btn" (click)="loginWithGoogle()">Login with Google</button>
+      <div class="login-footer">
+        <span>Don't have an account?</span>
+        <a routerLink="/signup">Sign up</a>
+      </div>
+    </form>
+  </div>
+</div>
+
